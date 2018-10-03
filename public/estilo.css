@@ -1,0 +1,45 @@
+@charset 'UTF-8';
+body {
+}
+header h1 {
+	font-size: 25px;
+}
+ul {
+	list-style: none;
+}
+
+li {
+	
+	display: inline-block;
+	margin: 5px;
+}
+
+.block {
+	display: block;
+
+}
+.text-center {
+	text-align: center;
+}
+
+#apresentacao p {
+	font-size: 20px;
+}
+
+.flexbox-end {
+	display: flex;
+	justify-content: flex-end;
+}
+.text-justify {
+	text-align: justify;
+}
+.centralizar {
+	display: flex;
+	justify-content: center;
+}
+#rodape {
+	padding: 5px;
+}
+footer li {
+	margin-right: 40px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang = 'pt-br'>
+	<head>
+
+		<!-- Autor: Elias Keven -->
+		<!-- Data: 17/10/2018 -->
+
+		<title>Elias Keven</title>
+		<meta name = 'viewport' content = 'width=device-width, initial-scale=1, shrink-to-fit=no'>
+		<meta name = "theme-color" content = "black">
+		<meta name = "apple-mobile-web-app-status-bar-style" content = "black">
+		<meta name = "msapplication-navbutton-color" content = "black">
+		<meta name = 'description' content = 'Portfolio de Elias Keven'>
+		<meta charset = 'UTF-8'/>
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+		<link rel = 'stylesheet' href = '../public/estilo.css'>
+		<link rel = 'stylesheet' href = '../public/estilo-postagem.css'>
+	</head>
+	<body>
+		<div id = 'fundo-cabecalho'>
+			<div class = 'container'>
+				<header>
+					
+					<!-- linha 1 -->
+					<!-- justify-content-between -->
+					<div class = 'row align-items-center' id = 'cabecalho'>
+						<!-- coluna 1-->
+						<div class = 'col-6 col-sm-8 col-lg-8 align-items-center'>
+							<h1 style = 'margin: 5px'>Elias Keven</h1>
+						</div>
+						<!-- coluna 2 -->
+						<div class = ' col-6 col-sm-3 col-lg-3'>
+							<nav>
+								<ul class = 'flexbox-end align-items-center' style = 'margin: 0px'>
+									<li><a href = '../index.html'>PORTFÓLIO</a></li>
+									<li><a href = '#'>PROJETOS</a></li>
+								</ul>
+							</nav>
+						</div>			
+					</div>
+					
+					<!-- final da linha 1 -->
+
+				</header>
+			</div>
+		</div>
+		<section>
+			<div class = 'container'>
+				<main>
+					<header id = 'cabecalho-postagem'>
+						<h1>Autor: Elias Keven</h1>
+						<h2>Data da postagem: 30 de Novembro de 2016</h2>
+						<h3><a href = '../index-blog.html'>Menu</a> > JavaScript – Operador Ternário e Condicional</h3>
+					</header>
+					<article id = 'postagem-principal'>			
+
+						<h1>JavaScript – Operador Ternário e Condicional</h1>
+
+						<p class = 'recuo'>Anteriormente falei sobre <em>operadores Unários e operadores Binários</em>. Agora vamos falar de um operador que facilita muito a nossa vida: O <strong>operador Ternário</strong>. Esse operador é incrível já que pode resumir uma condição em vez de digitar várias linhas com "if’s". Vamos ver um exemplo:</p>
+
+						<div class = 'caixa-codigo border barra-horizontal'>
+							<p data-codigo = true>
+								console.log (true ? 3:4);
+							</p>
+							<p class = 'border caixa-codigo'>// 3</p>
+						</div>
+
+						<p class = 'recuo'>Calma, vou explicar! Podemos notar no exemplo acima tres valores: O <em>true</em>, o <em>3</em> e o <em>4</em>. A interrogação no meio serve como seu intuito original: perguntar se é verdadeiro ou falso. Se for verdadeiro, irá mostrar no console o primeiro valor após a interrogação, que é o valor 3. Se for falso irá mostrar o segundo valor, que é o valor 4.</p>
+
+						<p>vamos ver um exemplo melhor:</p>
+						<div class = 'caixa-codigo border barra-horizontal'>
+							<p data-codigo = true>
+								const idadeJulia = 10; 
+								console.log (idadeJulia = 10 ? "Ela tem 10 anos" : "Ela não tem essa idade"); 
+							</p>
+							<p class = 'border caixa-codigo'>//Ela tem 10 anos.</p>
+						</div>
+						
+
+						<p class = 'recuo'>A variável idadeJulia vai receber 10, que refere-se a 10 anos. Dentro do console.log diz que, se for verdade que julia tem 10 anos, então (usando o “?”) o resultado é: “Ela tem 10 anos”. Porém se antes do “?” fosse outra idade como por exemplo: "idadeJulia = 8", logo estaria errado e mostraria: “Ela não tem essa idade.”</p>
+					</article>
+				</main>
+			</div>
+		</section>
+		<div class = 'container' style = 'background-color: #fffdfd;'>
+			<footer id = 'rodape' class = 'border'>
+				<nav class = 'centralizar'>
+					<ul class = 'centralizar'>
+						<li><a href = 'https://github.com/keven1406' target = '_blanck'>Github</a></li>
+						<li><a href = 'https://twitter.com/keven_2076' target = '_blanck'>Twitter</a></li>
+					</ul>
+				</nav>
+			</footer>
+			<script src = '../public/javascript.js'></script>
+			<script src = '../public/colorindo-codigo.js'></script>
+		</div>
+	</body>
+</html>

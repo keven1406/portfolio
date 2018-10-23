@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang = 'pt-br'>
+	<head>
+
+		<!-- Autor: Elias Keven -->
+		<!-- Data: 17/10/2018 -->
+
+		<title>Elias Keven</title>
+		<meta name = 'viewport' content = 'width=device-width, initial-scale=1, shrink-to-fit=no'>
+		<meta name = "theme-color" content = "black">
+		<meta name = "apple-mobile-web-app-status-bar-style" content = "black">
+		<meta name = "msapplication-navbutton-color" content = "black">
+		<meta name = 'description' content = 'Portfolio de Elias Keven'>
+		<meta charset = 'UTF-8'/>
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+		<link rel = 'stylesheet' href = '../public/estilo.css'>
+		<link rel = 'stylesheet' href = '../public/estilo-postagem.css'>
+	</head>
+	<body>
+		<div id = 'fundo-cabecalho'>
+			<div class = 'container'>
+				<header>
+					
+					<!-- linha 1 -->
+					<!-- justify-content-between -->
+					<div class = 'row align-items-center' id = 'cabecalho'>
+						<!-- coluna 1-->
+						<div class = 'col-6 col-sm-8 col-lg-8 align-items-center'>
+							<h1 style = 'margin: 5px'>Elias Keven</h1>
+						</div>
+						<!-- coluna 2 -->
+						<div class = ' col-6 col-sm-3 col-lg-3'>
+							<nav>
+								<ul class = 'flexbox-end align-items-center' style = 'margin: 0px'>
+									<li><a href = '../index.html'>PORTFÓLIO</a></li>
+									<li><a href = '#'>PROJETOS</a></li>
+								</ul>
+							</nav>
+						</div>			
+					</div>
+					
+					<!-- final da linha 1 -->
+
+				</header>
+			</div>
+		</div>
+		<section>
+			<div class = 'container'>
+				<main>
+					<header id = 'cabecalho-postagem'>
+						<h1>Autor: Elias Keven</h1>
+						<h2>Data da postagem: 25 de novembro de 2016.</h2>
+						<h3><a href = '../index-blog.html'>Menu</a> > JavaScript – Método slice</h3>
+					</header>
+					<article id = 'postagem-principal'>
+				
+						<h1>JavaScript – Método slice</h1>
+
+						<p class = 'recuo'><em>JavaScript</em> possui alguns métodos bem interessantes que da para brincar bastante. Um dos Métodos de Array é o <spna class = 'negrito'>slice</spna>. Esse método permite que você “selecione” apenas valores de array escolhidas por você, para que assim, possa criar um novo array. Da para usar até pra esconder letras em uma String (cadeia de caracteres). Vamos ver esse código que utiliza o método slice.</p>
+	           
+
+						<div class = 'border barra-horizontal caixa-codigo'>
+							<p data-codigo = true>
+								const nome = “AnaMaria”;
+					        	console.log (“Seu primeiro e segundo nome juntos são: “); 
+					        	console.log (nome);  
+					        	const primeiroNome = nome.slice (0, 3);
+					        	const segundoNome = nome.slice (3, 8);  
+					        	console.log ("Seu nome separado é: " + " " + primeiroNome" + segundoNome + "." );  
+
+
+							</p>
+						</div>
+
+						<p>O resultado no console é:</p>
+
+						<div class = 'border padding10'>
+							<p>Seu primeiro e segundo nome juntos são:<br/>
+							AnaMaria<br/>
+							Seu nome separado é: Ana Maria.</p>
+						</div>
+						<p class = 'recuo'>Observe que a constante primeiro nome está recebendo o valor que o metodo slice está retornando. Como passamos o primeiro argumento como 0, e o segundo sendo 3, ele irá retornar apenas os valores que estiverem na posição zero até a 3.</p>
+						<p>Interessante, né? Da para brincar bastante com as Arrays. São inúmeras as possibilidades. Então o que temos que fazer agora é: Praticar!!!!</p>
+					</article>
+				</main>
+			</div>
+		</section>
+		<div class = 'container' style = 'background-color: #fffdfd;'>
+			<footer id = 'rodape' class = 'border'>
+				<nav class = 'centralizar'>
+					<ul class = 'centralizar'>
+						<li><a href = 'https://github.com/keven1406' target = '_blanck'>Github</a></li>
+						<li><a href = 'https://twitter.com/keven_2076' target = '_blanck'>Twitter</a></li>
+					</ul>
+				</nav>
+			</footer>
+			<script src = '../public/javascript.js'></script>
+			<script src = '../public/colorindo-codigo.js'></script>
+		</div>
+	</body>
+</html>

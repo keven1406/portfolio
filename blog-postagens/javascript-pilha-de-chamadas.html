@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang = 'pt-br'>
+	<head>
+
+		<!-- Autor: Elias Keven -->
+		<!-- Data: 17/10/2018 -->
+
+		<title>Elias Keven</title>
+		<meta name = 'viewport' content = 'width=device-width, initial-scale=1, shrink-to-fit=no'>
+		<meta name = "theme-color" content = "black">
+		<meta name = "apple-mobile-web-app-status-bar-style" content = "black">
+		<meta name = "msapplication-navbutton-color" content = "black">
+		<meta name = 'description' content = 'Portfolio de Elias Keven'>
+		<meta charset = 'UTF-8'/>
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+		<link rel = 'stylesheet' href = '../public/estilo.css'>
+		<link rel = 'stylesheet' href = '../public/estilo-postagem.css'>
+	</head>
+	<body>
+		<div id = 'fundo-cabecalho'>
+			<div class = 'container'>
+				<header>
+					
+					<!-- linha 1 -->
+					<!-- justify-content-between -->
+					<div class = 'row align-items-center' id = 'cabecalho'>
+						<!-- coluna 1-->
+						<div class = 'col-6 col-sm-8 col-lg-8 align-items-center'>
+							<h1 style = 'margin: 5px'>Elias Keven</h1>
+						</div>
+						<!-- coluna 2 -->
+						<div class = ' col-6 col-sm-3 col-lg-3'>
+							<nav>
+								<ul class = 'flexbox-end align-items-center' style = 'margin: 0px'>
+									<li><a href = '../index.html'>PORTFÓLIO</a></li>
+									<li><a href = '#'>PROJETOS</a></li>
+								</ul>
+							</nav>
+						</div>			
+					</div>
+					
+					<!-- final da linha 1 -->
+
+				</header>
+			</div>
+		</div>
+		<section>
+			<div class = 'container'>
+				<main>
+					<header id = 'cabecalho-postagem'>
+						<h1>Autor: Elias Keven</h1>
+						<h2>Data da postagem: 6 de dezembro de 2016.</h2>
+						<h3><a href = '../index-blog.html'>Menu</a> > JavaScript – Pilha de chamadas</h3>
+					</header>
+					<article id = 'postagem-principal'>			
+
+						<h1>JavaScript – Pilha de chamadas</h1>
+
+						<p class = 'recuo'>Sabemos que um programa quando executado, tem inicio na <strong>primeira</strong> linha do código até a <strong>ultima</strong> linha. O fluxo de controle permite que o algoritmo seja lido da forma que deveria ser. Porém, vimos que existe declarações que nos permite modificar temporariamente esse fluxo, fazendo dar <em>loops</em> ou apenas pulando para uma linha de código se determinada condição for alcançada. Agora, vamos ver mais um modo de "modificar" a sequencia desse fluxo.</p>
+
+						<h1>Pilha de Chamada (Call Stack)</h1>
+
+						<p class = 'recuo'>As funções quando declaradas, nos permite executar um código dentro do nosso código principal sempre que ele for chamado. Mas ao fim da função, como o JavaScript volta para o fluxo ou contexto principal? Tudo volta ao normal porque o JavaScript monta uma <em>pilha de fluxos ou contextos</em> com todas as funções que estão sendo executadas no momento. Por exemplo:</p>
+
+						<div class = 'caixa-codigo barra-horizontal border'>
+							<p data-codigo = true>
+								function a ( ) { 
+									return "Eu quero café"
+								} 
+								function b( ) {  
+									return a( );  
+								} 
+								console.log (b( )); 
+							</p>
+						</div>
+
+						<p class = 'recuo'>Vamos prestar atenção no nosso exemplo acima. Ao iniciar o programa, o computador irá ler o console.log que está fazendo uma chamada para a função <strong>b()</strong>, notamos claramente que o bloco de códigos da função <strong>b()</strong> está retornando o texto da chamada da função <strong>a()</strong>, que vai fazer com que o programa execute os códigos contidos dentro dela. Dentro de <strong>a()</strong>, temos como retorno a string “Eu quero café!”, que será retornada onde foi feita sua chamada: <strong>a()</strong>, que está dentro da função <strong>b()</strong>. Retornado ao valor <strong>a()</strong>, o mesmo será retornado ao console.log que originalmente chamou a função <strong>b()</strong>.</p>
+
+						<p class = 'recuo'>Entendendo como funciona o exemplo anterior, vamos entender como o programa sai do fluxo original que era o console.log, vai pra um novo fluxo, que é b(), vai para outro fluxo que é a(), volta para b(), e por fim continua no fluxo original em console.log.</p>
+
+						<p class = 'recuo'>Para fazer isso sem perder o fluxo original, o JavaScript abre um tipo de pilha que armazena o novo fluxo na parte de "cima". Seguindo o código que mostrei, a imagem abaixo irá representar como ficaria a pilha de contextos, ou melhor, pilha de chamadas:</p>
+
+						<div class = 'row justify-content-center margin10'>
+							<figure>
+								<img src = './img-postagens/pilha-de-chamadas.jpg' alt = 'A imagem mostra 3 barras. A primeira chamada fluxo original fica em baixo, a segunda barra está em cima da anterior e se chama fluxo de B, e a ultima que está em cima do fluxo de B, se chama fluxo de A.'>
+								<figcaption>
+									<p>Pilha de Chamadas</p>
+								</figcaption>
+							</figure>
+						</div>
+
+						<p class = 'recuo'>Como podemos notar, o fluxo a() fica no topo da pilha por ser o ultimo a ser chamado , deixando os outros por ordem de chamada em baixo dele. Quando a função a() termina seu papel, ela é retirada do topo da pilha, e no seu lugar fica b(). Quando b() terminar o que deve fazer, ela é retirada da pilha sobrando apenas o fluxo original que vai dar continuidade ao programa.</p>
+
+						<p class = 'recuo'>Toda essa pilha fica armazenada na memoria do computador, para que ele possa se lembrar do contexto original do programa. Porém, quando a pilha fica muito extensa ao ponto de não termos mais memósria para armazena-la, acontece o seguite resultado:</p>
+
+						<p class = 'borcer caixa-codigo'>out of stack space (Sem espaço na pilha) ou too much recursion (Muitas recursões)</p>
+					</article>
+				</main>
+			</div>
+		</section>
+		<div class = 'container' style = 'background-color: #fffdfd;'>
+			<footer id = 'rodape' class = 'border'>
+				<nav class = 'centralizar'>
+					<ul class = 'centralizar'>
+						<li><a href = 'https://github.com/keven1406' target = '_blanck'>Github</a></li>
+						<li><a href = 'https://twitter.com/keven_2076' target = '_blanck'>Twitter</a></li>
+					</ul>
+				</nav>
+			</footer>
+			<script src = '../public/javascript.js'></script>
+			<script src = '../public/colorindo-codigo.js'></script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang = 'pt-br'>
+	<head>
+
+		<!-- Autor: Elias Keven -->
+		<!-- Data: 17/10/2018 -->
+
+		<title>Elias Keven</title>
+		<meta name = 'viewport' content = 'width=device-width, initial-scale=1, shrink-to-fit=no'>
+		<meta name = "theme-color" content = "black">
+		<meta name = "apple-mobile-web-app-status-bar-style" content = "black">
+		<meta name = "msapplication-navbutton-color" content = "black">
+		<meta name = 'description' content = 'Portfolio de Elias Keven'>
+		<meta charset = 'UTF-8'/>
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+		<link rel = 'stylesheet' href = '../public/estilo.css'>
+		<link rel = 'stylesheet' href = '../public/estilo-postagem.css'>
+	</head>
+	<body>
+		<div id = 'fundo-cabecalho'>
+			<div class = 'container'>
+				<header>
+					
+					<!-- linha 1 -->
+					<!-- justify-content-between -->
+					<div class = 'row align-items-center' id = 'cabecalho'>
+						<!-- coluna 1-->
+						<div class = 'col-6 col-sm-8 col-lg-8 align-items-center'>
+							<h1 style = 'margin: 5px'>Elias Keven</h1>
+						</div>
+						<!-- coluna 2 -->
+						<div class = ' col-6 col-sm-3 col-lg-3'>
+							<nav>
+								<ul class = 'flexbox-end align-items-center' style = 'margin: 0px'>
+									<li><a href = '../index.html'>PORTFÓLIO</a></li>
+									<li><a href = '#'>PROJETOS</a></li>
+								</ul>
+							</nav>
+						</div>			
+					</div>
+					
+					<!-- final da linha 1 -->
+
+				</header>
+			</div>
+		</div>
+		<section>
+			<div class = 'container'>
+				<main>
+					<header id = 'cabecalho-postagem'>
+						<h1>Autor: Elias Keven</h1>
+						<h2>Data da postagem: 30 de Novembro de 2016</h2>
+						<h3><a href = '../index-blog.html'>Menu</a> >JavaScript básico – Estruturas de Repetição</h3>
+					</header>
+					<article id = 'postagem-principal'>			
+
+
+						<h1>JavaScript – Estruturas de Repetição</h1>
+
+						<p>Obs: Essa explicação é para pessoas que já estudaram <strong>lógica de programação</strong>. Está bem resumida. Se ainda não começou a estudar lógica, comece. A lógica <strong>facilita</strong> nosso aprendizado em níveis surreais!</p>
+
+						<p class = 'recuo'>Ao estudar programação, é muito importante saber como um programa é processado pelo computador. Sabemos que o inicio do algoritmo inicia-se na parte superior, logo quando digitamos a primeira linha de código. Quando o computador ler o nosso algoritmo, ele vai iniciar, logicamente, da primeira linha de código até a ultima. Porém, existe uma alternativa a isso, fazendo com que ele repita o código desejado. Como assim? Quando fazemos um programa que contenha uma caixa de texto, onde precisamos digitar a senha certa para acessar o conteúdo, estamos em uma <strong>estrutura de repetição</strong>. Quando erramos a palavra, o programa em vez de continuar, volta para o ponto onde estávamos, nos possibilitando reescrever a palavra.</p>
+
+						<h1>Estrutura “Do while”</h1>
+
+						<p>Vamos ver um exemplo bem simples:</p>
+						<div class = 'caixa-codigo barra-horizontal border'>
+							<p data-codigo = true>
+								const senha = 123; 
+								do { 
+									let inserir = Number(prompt("Digite a senha:")); 
+								} while (inserir != senha); 
+								alert("Bem vindo");
+							</p>
+						</div>
+
+						<p class = 'recuo'>Aqui no exemplo, vemos que enquanto não digitamos o valor "123", o programa irá continuar pedindo a senha. Bem simples e legal né? Essa estrutura que vimos é a estrutura “do”. Ela funciona da seguinte maneira: Enquanto o resultado <em>não for o esperado</em> ela vai continuar o loop(repetindo) ate o resultado ser o <em>correto</em>.</p>
+
+						<div class = 'caixa-codigo barra-horizontal border'>
+							<p data-codigo = true>do { } while (inserir != senha)</p>
+						</div>
+						<p>Ou seja, ele vai executar o bloco entre chaves ({ }) enquanto a variável “inserir” for <strong>diferente</strong> da variável “senha”. Tentem fazer isso com outros exemplos. É bem legal e da pra fazer uma infinidade de coisas.</p>
+
+						<h1>While</h1>
+
+						<p>Outra estrutura de repetição é a <em>“While”</em>. Vamos ver um código similar, mas dessa vez usando o while.</p>
+						
+						<div class = 'caixa-codigo barra-horizontal border'>
+							<p data-codigo = true>		
+								const senha = 123; 
+								while (senha != inserir) { 
+									var inserir = prompt("Digite a senha:"); 
+								}	 
+								alert("Bem vindo");
+							</p>
+						</div>
+
+						<p class = 'recuo'>Vai dar o mesmo resultado, a única diferença é que no método anterior, o programa executa o código para depois repeti-lo. Já com essa nova estrutura, o programa vai ver se precisa repetir e <em>depois</em> executa o conteúdo do seu bloco.</p>
+
+						<p>Vamos ver um exemplo ainda mais legal, baseado no código anterior:</p>
+
+						<div class = 'caixa-codigo barra-horizontal border'>
+							<p data-codigo = true>
+								const senha = 123; 
+								let contar = 5; 
+								while (cont > 0) { 
+									if (contar == 5) { 
+										let inserir = prompt(“Digite a senha:”); 
+										if ( inserir == senha ) { 
+											break ; 
+										} 
+									} 
+									else { 
+										let inserir = prompt("Você tem apenas: " + contar + " chances." + "\n Digite a senha:" ); 
+										if (inserir == senha) break ; 
+									} 
+									cont –; 
+								} 
+								if (inserir == senha) alert(“Bem vindo”); 
+								else if ( ! cont )
+								alert(“Suas chances acabaram”);
+							</p>
+						</div>
+
+												<h1>“For”</h1> 
+
+												<p>Vendo que a estrutura while é muito utilizadas nas linguagens de programação, o JavaScript trás uma estrutura resumida para facilitar nossa vida: A estrutura <em>“for”</em>. Vamos pegar o mesmo código anterior e colocar esse nova estrutura.</p>
+
+						<div class = 'caixa-codigo barra-horizontal border'>
+							<p data-codigo = true>
+								const senha = 123;
+								let contar = 0; 
+								for (var contar = 5; cont > 0 ; cont - ) { 
+								if (contar == 5) { 
+								var inserir = prompt(“Digite a senha:”); 
+								if (inserir == senha) 
+									break ; 
+								} 
+								else {  
+									let inserir = prompt("Você tem apenas: " + contar + " chances." + "\n Digite a senha:" ); 
+									if (inserir == senha) 
+										break ; 
+								} 
+								} 
+								if (inserir == senha) 
+								alert(“Bem vindo”); 
+								else if ( ! contar )
+								alert("Suas chances acabaram");
+							</p>
+						</div>
+
+
+						<p>Dessa forma podemos declarar a variável contadora, dizer a condição e usar o c–, que está monitorando a volta do loop. Tudo isso em uma linha de código só.</p>
+
+						<p>Muito interessante. Claro que da para fazer mais resumido, mas tentei deixar o mais fácil de entender possível. Então é isso. Espero que tenham gostado. Obrigado!</p>
+					</article>
+				</main>
+			</div>
+		</section>
+		<div class = 'container' style = 'background-color: #fffdfd;'>
+			<footer id = 'rodape' class = 'border'>
+				<nav class = 'centralizar'>
+					<ul class = 'centralizar'>
+						<li><a href = 'https://github.com/keven1406' target = '_blanck'>Github</a></li>
+						<li><a href = 'https://twitter.com/keven_2076' target = '_blanck'>Twitter</a></li>
+					</ul>
+				</nav>
+			</footer>
+			<script src = '../public/javascript.js'></script>
+			<script src = '../public/colorindo-codigo.js'></script>
+		</div>
+	</body>
+</html>

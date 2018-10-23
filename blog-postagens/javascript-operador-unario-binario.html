@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang = 'pt-br'>
+	<head>
+
+		<!-- Autor: Elias Keven -->
+		<!-- Data: 17/10/2018 -->
+
+		<title>Elias Keven</title>
+		<meta name = 'viewport' content = 'width=device-width, initial-scale=1, shrink-to-fit=no'>
+		<meta name = "theme-color" content = "black">
+		<meta name = "apple-mobile-web-app-status-bar-style" content = "black">
+		<meta name = "msapplication-navbutton-color" content = "black">
+		<meta name = 'description' content = 'Portfolio de Elias Keven'>
+		<meta charset = 'UTF-8'/>
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+		<link rel = 'stylesheet' href = '../public/estilo.css'>
+		<link rel = 'stylesheet' href = '../public/estilo-postagem.css'>
+	</head>
+	<body>
+		<div id = 'fundo-cabecalho'>
+			<div class = 'container'>
+				<header>
+					
+					<!-- linha 1 -->
+					<!-- justify-content-between -->
+					<div class = 'row align-items-center' id = 'cabecalho'>
+						<!-- coluna 1-->
+						<div class = 'col-6 col-sm-8 col-lg-8 align-items-center'>
+							<h1 style = 'margin: 5px'>Elias Keven</h1>
+						</div>
+						<!-- coluna 2 -->
+						<div class = ' col-6 col-sm-3 col-lg-3'>
+							<nav>
+								<ul class = 'flexbox-end align-items-center' style = 'margin: 0px'>
+									<li><a href = './index.html' target = '_blanck'>PORTFÓLIO</a></li>
+									<li><a href = '#' target = '_blanck'>PROJETOS</a></li>
+								</ul>
+							</nav>
+						</div>			
+					</div>
+					
+					<!-- final da linha 1 -->
+
+				</header>
+			</div>
+		</div>
+		<section>
+			<div class = 'container'>
+				<main>
+					<header id = 'cabecalho-postagem'>
+						<h1>Autor: Elias Keven</h1>
+						<h2>Data da postagem: 30 de Novembro de 2016</h2>
+						<h3><a href = '../index-blog.html'>Menu</a> > JavaScript – Método slice</h3>
+					</header>
+					<article id = 'postagem-principal'>			
+
+						<h1>JavaScript básico – Operadores aritméticos Unários e Binários</h1>
+
+						<p class = recuo>Operadores estão e sempre esteve em nossas vidas. Desde nosso nascimento até a nossa morte. O universo em si é composto por valores e seus operadores.  Podemos citar vários exemplos: Um nascimento,  mais um dia de vida ou até mesmo um átomo compartilhando um elétron com outro átomo.
+						Os operadores são o modo em que um elemento uni-se a outro para formar um novo elemento. Igual a um ingrediente que uni-se a outro para formar uma deliciosa comida.
+						Nós vemos o uso de operadores explicitamente na matemática. Podemos notar que cada numero precisa unir-se a outro para gerar um resultado. Os operadores básicos são:</p>
+
+						<p data-codigo = true class = 'border caixa-codigo' style = 'text-align: center'> + (adição), - (subtração), / (divisão) e * (multiplicação)</p>
+
+						<p class = recuo>Você agora deve estar se perguntando: Por que esse cara me fez ler tudo isso só para explicar que operadores são as continhas que conhecemos na matemática? Calma, caro aprendiz. Apenas dei esse mar de comparações para que vocês entendam que o universo em si é parecido com a lógica de programação. Mas irei detalhar isso em outro post. Agora vamos ao que interessa.</p>
+
+						<p class = recuo>No JavaScript existem dois tipos de operadores aritméticos: Os Unários e os Binários. O primeiro, refere-se a operações de apenas um valor. Enquanto o segundo refere-se, como o nome já diz, a dois valores. Como assim? Vamos entender melhor vendo um exemplo:</p>
+
+						<p><strong>Binário:</strong> 1 + 1 = 2  /* Como podem notar, temos um operador “+” unindo dois números. Operadores binários sempre vão servir para calcular o valor de uma operação entre dois números. */</p>
+
+						<p><strong>Unário:</strong> typeof(2) /*Aqui vemos um exemplo de operador Unário. Como podem ver, eles trabalham em cima de um único valor. */</p>
+
+						<p>Vamos ver como fica testando no console, lembrando que “//” significa o resultado mostrado no console.</p>
+
+						<p class = 'negrito'>Operador binário:</p>
+						<p data-codigo = true class = 'border caixa-codigo'>console.log (1 + 1);</p> 
+						<p>Resultado:</p>
+						<p class = 'border caixa-codigo'>//2</p>
+
+						<p class = 'negrito'>Operador Unário:</p>
+
+						<p data-codigo = true class = 'border caixa-codigo'>console.log (typeof(2));</p>  
+
+						<p class = 'border caixa-codigo'>//number</p>
+
+						<p>Obs: O operador “typeof()” diz se o valor é um número ou uma string.</p>
+
+						<p>Uma ideia legal, é transformar um operador Binário em Unário fazendo o seguinte processo:</p>
+
+						<p data-codigo = true class = 'border caixa-codigo'>console.log ( - ( 10 + 15)); </p>
+						<p class = 'border caixa-codigo'>//-25</p>
+
+						<p>Então, agora é com vocês. Vamos estudar e praticar esses operadores aritméticos.</p>
+				</article>
+				</main>
+			</div>
+		</section>
+		<div class = 'container' style = 'background-color: #fffdfd;'>
+			<footer id = 'rodape' class = 'border'>
+				<nav class = 'centralizar'>
+					<ul class = 'centralizar'>
+						<li><a href = 'https://github.com/keven1406' target = '_blanck'>Github</a></li>
+						<li><a href = 'https://twitter.com/keven_2076' target = '_blanck'>Twitter</a></li>
+					</ul>
+				</nav>
+			</footer>
+			<script src = '../public/javascript.js'></script>
+			<script src = '../public/colorindo-codigo.js'></script>
+		</div>
+	</body>
+</html>

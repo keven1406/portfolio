@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/* Menu postagem */
+
+figcaption {
+	text-align: center;
+	font-size: 15px;
+	color: #494c51;
+}
+#menu-postagem {
+	margin-top: 50px;
+
+}
+#apresentacao h1 {
+	font-weight: bold;
+	padding: 10px 0 10px 10px;
+}
+#menu-postagem li {
+	margin-left: 0;
+	padding: 3px;
+}
+#cabecalho-postagem {
+	margin:10px 0 10px 0;
+	border-bottom: 1px solid #606060;
+}
+#cabecalho-postagem h1, h2, h3 {
+	font-size: 14px;
+	font-family: 'Arial', sans-serif;
+}
+#cabecalho-postagem a {
+	color: black;
+}
+#postagem-principal h1 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+#postagem-principal p {
+	margin: 10px 0 10px 0;
+}
+#postagem-principal {
+	margin-bottom: 50px;
+}
+.recuo {
+	text-indent: 30px;
+}
+/* codigo */
+
+.variavel {
+	color: #1262e5;
+}
+.funcao {
+	color: blue;
+}
+.metodo {
+	color: green;
+}
+.operador {
+	color: red;
+}
+.comentario {
+	color: #606060;
+}
+.padding10 {
+	padding: 10px;
+}
+.palavra-chave {
+	color: red;
+}
+.caixa-codigo {
+	padding: 10px;
+}
+.barra-horizontal {
+	overflow-x: scroll;
+	white-space:nowrap;
+}
+.margin10 {
+	margin-top: 30px;
+
+}
+#postagem-principal h1 ~ h1 {
+	font-size: 30px;
+}

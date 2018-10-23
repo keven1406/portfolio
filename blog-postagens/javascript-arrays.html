@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang = 'pt-br'>
+	<head>
+
+		<!-- Autor: Elias Keven -->
+		<!-- Data: 17/10/2018 -->
+
+		<title>Elias Keven</title>
+		<meta name = 'viewport' content = 'width=device-width, initial-scale=1, shrink-to-fit=no'>
+		<meta name = "theme-color" content = "black">
+		<meta name = "apple-mobile-web-app-status-bar-style" content = "black">
+		<meta name = "msapplication-navbutton-color" content = "black">
+		<meta name = 'description' content = 'Portfolio de Elias Keven'>
+		<meta charset = 'UTF-8'/>
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+		<link rel = 'stylesheet' href = '../public/estilo.css'>
+		<link rel = 'stylesheet' href = '../public/estilo-postagem.css'>
+	</head>
+	<body>
+		<div id = 'fundo-cabecalho'>
+			<div class = 'container'>
+				<header>
+					
+					<!-- linha 1 -->
+					<!-- justify-content-between -->
+					<div class = 'row align-items-center' id = 'cabecalho'>
+						<!-- coluna 1-->
+						<div class = 'col-6 col-sm-8 col-lg-8 align-items-center'>
+							<h1 style = 'margin: 5px'>Elias Keven</h1>
+						</div>
+						<!-- coluna 2 -->
+						<div class = ' col-6 col-sm-3 col-lg-3'>
+							<nav>
+								<ul class = 'flexbox-end align-items-center' style = 'margin: 0px'>
+									<li><a href = './index.html' target = 'blanck'>INICIO</a></li>
+									<li><a href = '#' target = '_blanck'>PROJETOS</a></li>
+								</ul>
+							</nav>
+						</div>			
+					</div>
+					
+					<!-- final da linha 1 -->
+
+				</header>
+			</div>
+		</div>
+		<section>
+			<div class = 'container'>
+				<main>
+					<header id = 'cabecalho-postagem'>
+						<h1>Autor: Elias Keven</h1>
+						<h2>Data da postagem: 30 de Novembro de 2016</h2>
+						<h3><a href = '../index-blog.html'>Menu</a> > JavaScript – Arrays</h3>
+					</header>
+					<article id = 'postagem-principal'>			
+
+
+					<h1>JavaScript – Arrays</h1>
+
+					<p class = 'recuo'>Vimos que cada variável possui um valor podendo ser Booleano, Numérico ou String (cadeia de caracteres). Porem, ficamos muito limitados quando queremos inserir no nosso programa vários valores. Até onde aprendemos, para declarar uma variável precisamos digitar “var” mais o nome da variável, após isso colocar um sinal de igual e o valor da variável. Ex: const n = 1;</p>
+
+					<p class = 'recuo'>Mas e se agente precisar de várias variáveis com valores diferentes? Teríamos que declarar variável por variável? Não e é bem simples. Basta usar um Array. Um Array é como um grupo de variáveis reunidas em um único nome, bastando apenas para acessa-lo digitar o nome do Array mais o número do local onde o valor que queremos está. Vamos entender melhor com esse exemplo:</p>
+
+					<p data-codigo = true class = 'border caixa-codigo' style = 'text-align: center'>const numeros = [1,2,3,4];</p>
+
+					<p class = 'recuo'>Para acessar o valor “1”, precisamos por em um console.log, por exemplo: numeros[0]. Por que precisamos chamar o Array [0] para acessar o valor 1? Por que o endereço dos valores começam por zero. O valor um está na posição “0” do Array, assim como o valor dois está na posição 1 do array e assim sucessivamente.</p>
+
+					<p>Existem várias formas de usar um array. Vamos ver uma bem simples.</p>
+
+				    <p data-codigo = true class = 'border caixa-codigo'>
+					    const numeros = [1,2,3]; 
+					    for (let atual = 0; atual < 2; atual++) { 
+					    	console.log (numeros[atual]);  
+					    } 
+					</p>
+
+					<p>O código a cima mostra no console o valor que cada Array tem. O valor do Array[0] é 1, o valor do Array[1] é 2 e o valor do Array[2] é 3.</p>
+
+		</section>
+		<div class = 'container' style = 'background-color: #fffdfd;'>
+			<footer id = 'rodape' class = 'border'>
+				<nav class = 'centralizar'>
+					<ul class = 'centralizar'>
+						<li><a href = 'https://github.com/keven1406' target = '_blanck'>Github</a></li>
+						<li><a href = 'https://twitter.com/keven_2076' target = '_blanck'>Twitter</a></li>
+					</ul>
+				</nav>
+			</footer>
+			<script src = '../public/javascript.js'></script>
+			<script src = '../public/colorindo-codigo.js'></script>
+		</div>
+	</body>
+</html>

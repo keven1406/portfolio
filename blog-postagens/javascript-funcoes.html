@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang = 'pt-br'>
+	<head>
+
+		<!-- Autor: Elias Keven -->
+		<!-- Data: 17/10/2018 -->
+
+		<title>Elias Keven</title>
+		<meta name = 'viewport' content = 'width=device-width, initial-scale=1, shrink-to-fit=no'>
+		<meta name = "theme-color" content = "black">
+		<meta name = "apple-mobile-web-app-status-bar-style" content = "black">
+		<meta name = "msapplication-navbutton-color" content = "black">
+		<meta name = 'description' content = 'Portfolio de Elias Keven'>
+		<meta charset = 'UTF-8'/>
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+		<link rel = 'stylesheet' href = '../public/estilo.css'>
+		<link rel = 'stylesheet' href = '../public/estilo-postagem.css'>
+	</head>
+	<body>
+		<div id = 'fundo-cabecalho'>
+			<div class = 'container'>
+				<header>
+					
+					<!-- linha 1 -->
+					<!-- justify-content-between -->
+					<div class = 'row align-items-center' id = 'cabecalho'>
+						<!-- coluna 1-->
+						<div class = 'col-6 col-sm-8 col-lg-8 align-items-center'>
+							<h1 style = 'margin: 5px'>Elias Keven</h1>
+						</div>
+						<!-- coluna 2 -->
+						<div class = ' col-6 col-sm-3 col-lg-3'>
+							<nav>
+								<ul class = 'flexbox-end align-items-center' style = 'margin: 0px'>
+									<li><a href = '../index.html' target = '_blanck'>PORTFÓLIO</a></li>
+									<li><a href = '#' target = '_blanck'>PROJETOS</a></li>
+								</ul>
+							</nav>
+						</div>			
+					</div>
+					
+					<!-- final da linha 1 -->
+
+				</header>
+			</div>
+		</div>
+		<section>
+			<div class = 'container'>
+				<main>
+					<header id = 'cabecalho-postagem'>
+						<h1>Autor: Elias Keven</h1>
+						<h2>Data da postagem: 30 de Novembro de 2016</h2>
+						<h3><a href = '../index-blog.html'>Menu</a> > JavaScript – Funções</h3>
+					</header>
+					<article id = 'postagem-principal'>			
+						<h1>JavaScript básico – Funções</h1>
+
+						<p><em>Funções</em> são como mini programas dentro do seu programa principal que vão exercer um tipo de papel. Elas são <strong>variáveis</strong> que já vem pre-definidas ou que podem ser criadas por você ao decorrer do programa.</p>
+
+						<h1>Exemplos de funções pre-definidas</h1>
+
+						<p><em>console.log()</em> – Mostra no console um log.</p>
+
+						<p><em>Math.min(a,b)</em> – Mostra o menor valor dos dois números.</p>
+
+						<p><em>Math.max(a,b)</em> – Mostra o maior valor dos dois números.</p>
+
+						<p><em>visNaN()</em> – é NaN. Se acrescentar um operador lógico fica !éNaN (não é NaN ou não é numero).</p>
+
+						<p>valert()</em> – Mostra uma janelinha de alerta.</p>
+
+						<p><em>confirm()</em>– Mostra uma janela com a opção ok ou cancelar. Pode ser útil para treinos.</p>
+
+						<p><em>prompt()</em> – Mostra uma opção com uma caixa de texto e a opção confirmar ou sair.</p>
+
+						<p><em>Number()</em>– Transforma o valor que será inserido no type Number.</p>
+
+						<p><em>Boolean()</em> – Transforma o valor que será inserido no type Booleano.</p>
+
+						<p><em>String()</em> – Transforma o valor que será inserido no type String.</p>
+
+						<p>Esses são alguns exemplos de funções já existentes dentro do ambiente JavaScript.</p>
+
+						<h1>Exemplo de código de cada função a cima</h1>
+
+						<div class = 'border caixa-codigo barra-horizontal'>
+							<p data-codigo = true>
+								const inicio = Boolean(confirm(“Quer iniciar o jogo?”)); 
+								if (inicio == true) { 
+									let nome = prompt(“Para iniciar o game digite seu nome”,””); 
+									nome2 = Boolean(nome); 
+								} 
+								if (nome2 == true) alert("Bem vindo" + nome); 
+								else { 
+									let fim = Boolean(confirm("Tem certeza que quer sair?"s)); 
+								} 
+								if (fim == true) { 
+									alert( "Se cuide" ); 
+								}
+							</p>
+						</div>
+
+						<p>Legal né? Agora é a hora de vocês treinarem. Pesquisem mais nos fóruns pela internet, leiam livros, apostilas e assistam vídeos. Assim vocês realmente vão aprender a programar em JavaScript, uma das linguagens que está em grande popularidade e crescimento na Web.</p>
+					</article>
+				</main>
+			</div>
+		</section>
+		<div class = 'container' style = 'background-color: #fffdfd;'>
+			<footer id = 'rodape' class = 'border'>
+				<nav class = 'centralizar'>
+					<ul class = 'centralizar'>
+						<li><a href = 'https://github.com/keven1406' target = '_blanck'>Github</a></li>
+						<li><a href = 'https://twitter.com/keven_2076' target = '_blanck'>Twitter</a></li>
+					</ul>
+				</nav>
+			</footer>
+			<script src = './public/javascript.js'></script>
+			<script src = '../public/colorindo-codigo.js'></script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang = 'pt-br'>
+	<head>
+
+		<!-- Autor: Elias Keven -->
+		<!-- Data: 17/10/2018 -->
+
+		<title>Elias Keven</title>
+		<meta name = 'viewport' content = 'width=device-width, initial-scale=1, shrink-to-fit=no'>
+		<meta name = "theme-color" content = "black">
+		<meta name = "apple-mobile-web-app-status-bar-style" content = "black">
+		<meta name = "msapplication-navbutton-color" content = "black">
+		<meta name = 'description' content = 'Portfolio de Elias Keven'>
+		<meta charset = 'UTF-8'/>
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+		<link rel = 'stylesheet' href = '../public/estilo.css'>
+		<link rel = 'stylesheet' href = '../public/estilo-postagem.css'>
+	</head>
+	<body>
+		<div id = 'fundo-cabecalho'>
+			<div class = 'container'>
+				<header>
+					
+					<!-- linha 1 -->
+					<!-- justify-content-between -->
+					<div class = 'row align-items-center' id = 'cabecalho'>
+						<!-- coluna 1-->
+						<div class = 'col-6 col-sm-8 col-lg-8 align-items-center'>
+							<h1 style = 'margin: 5px'>Elias Keven</h1>
+						</div>
+						<!-- coluna 2 -->
+						<div class = ' col-6 col-sm-3 col-lg-3'>
+							<nav>
+								<ul class = 'flexbox-end align-items-center' style = 'margin: 0px'>
+									<li><a href = './index.html' target = '_blanck'>PORTFÓLIO</a></li>
+									<li><a href = '#' target = '_blanck'>PROJETOS</a></li>
+								</ul>
+							</nav>
+						</div>			
+					</div>
+					
+					<!-- final da linha 1 -->
+
+				</header>
+			</div>
+		</div>
+		<section>
+			<div class = 'container'>
+				<main>
+					<header id = 'cabecalho-postagem'>
+						<h1>Autor: Elias Keven</h1>
+						<h2>Data da postagem: 25 de novembro de 2016. </h2>
+						<h3><a href = '../index-blog.html'>Menu</a> > JavaScript – Método sort</h3>
+					</header>
+					<article id = 'postagem-principal'>			
+
+						<h1>JavaScript – Método de Array sort</h1>
+
+						<p class = 'recuo'>Muitos se complicam quando tentam entender esse método, já que ele precisa de uma função. E é justamente nessa função que complica. Tudo é bem fácil, porém é questão de lógica.</p>
+
+						<p class = 'recuo'>Esse método permite ordenar os valores dos Arrays de forma crescente ou decrescente. Ele é muito fácil, já que só precisa acrescenta-lo a variável e pronto, estará ordenado de forma crescente. Vamos a um exemplo:</p>
+
+						<p data-codigo = true class = 'border caixa-codigo barra-horizontal'>
+						 	const numeros = [1,5,4,2,3,6]; 
+							const organizar = numeros.sort ( ); 
+							console.log (organizar); 
+						</p>
+						
+						<p>Exibição no console: Array [1, 2, 3, 4, 5, 6]</p>
+
+						<p class = 'recuo'>Simples, não? Porem, quando usamos um numero que seja maior que nove ele não coloca na ordem correta. Vamos ver um exemplo com o mesmo código, sendo que agora um numero de dois dígitos:</p>
+
+						<p data-codigo = true class = 'border caixa-codigo barra-horizontal'>
+							const numeros = [1,5,4,2,3,6,35]; 
+							numeros.sort ( );  
+							console.log (numeros); 
+						</p>
+						
+						<p>Resultado no console: Array [ 1, 2, 3, 35, 4, 5, 6 ] </p>
+
+						<p class = 'recuo'>Notaram? Ele conta como se o 35 fosse igual ao 3, colocando ele próximo do 3. Para alterar isso precisamos usar uma função. Vamos ver um exemplo:</p>
+						<p data-codigo = true class = 'border caixa-codigo barra-horizontal'>
+							const ordenarArray = (numeroAnterior , numeroAtual) => { 
+							    if (numeroAnterior > numeroAtual) { 
+							    	return 1; 
+							    } 
+							    if (numeroAnterior < numeroAtual) { 
+							    	return -1; 
+							    } 
+							    if (numeroAnterior === numeroAtual) { 
+							    	return 0; 
+							    }
+							} 
+							const numeros = [1,5,4,2,3,6,35]; 
+							console.log (numeros.sort (ordenarArray));
+						</p>
+
+						<p>Resultado no console: Array [ 1, 2, 3, 4, 5, 6, 35 ]</p>
+
+						<p class = 'recuo'>Como podemos notar, o resultado no console agora está correto. Agora ele encara o 35 como um numero inteiro. Agora vamos fazer outra coisa divertida: Ordenar de forma decrescente.
+						Ordenando de forma decrescente</p>
+
+						<p>Sabendo da função acima, basta ir pela lógica e alterar o valor do -1 e 1. Vamos Inverter os valores para 1 e -1 e ver o que acontece:</p>
+
+						<p data-codigo = true class = 'border caixa-codigo barra-horizontal'>
+							const ordenarArray(numeroAnterior, numeroAtual) { 
+							if (numeroAnterior > numeroAtual) { 
+								return - 1;  
+							} 
+							if (numeroAnterior < numeroAtual) { 
+								return 1; 
+							} 
+							if (numeroAnterior == numeroAtual) { 
+								return 0; 
+							} 
+							} 
+							const numeros = [1,5,4,2,3,6,35]; 
+							console.log (numeros.sort (ordenarArray)); 
+							console.log (a); 
+						</p>
+						<p>Resultado no console: Array [ 35, 6, 5, 4, 3, 2, 1 ]</p>
+
+						<p>Legal né? Agora é sua vez! Coloque sua cabeça pra funcionar e crie um código divertido baseado no que você vê no dia a dia. Só assim irá conseguir aprender a linguagem!</p>
+					</article>
+				</main>
+			</div>
+		</section>
+		<div class = 'container' style = 'background-color: #fffdfd;'>
+			<footer id = 'rodape' class = 'border'>
+				<nav class = 'centralizar'>
+					<ul class = 'centralizar'>
+						<li><a href = 'https://github.com/keven1406' target = '_blanck'>Github</a></li>
+						<li><a href = 'https://twitter.com/keven_2076' target = '_blanck'>Twitter</a></li>
+					</ul>
+				</nav>
+			</footer>
+			<script src = '../public/javascript.js'></script>
+			<script src = '../public/colorindo-codigo.js'></script>
+		</div>
+	</body>
+</html>

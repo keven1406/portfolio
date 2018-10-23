@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang = 'pt-br'>
+	<head>
+
+		<!-- Autor: Elias Keven -->
+		<!-- Data: 17/10/2018 -->
+
+		<title>Elias Keven</title>
+		<meta name = 'viewport' content = 'width=device-width, initial-scale=1, shrink-to-fit=no'>
+		<meta name = "theme-color" content = "black">
+		<meta name = "apple-mobile-web-app-status-bar-style" content = "black">
+		<meta name = "msapplication-navbutton-color" content = "black">
+		<meta name = 'description' content = 'Portfolio de Elias Keven'>
+		<meta charset = 'UTF-8'/>
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+		<link rel = 'stylesheet' href = '../public/estilo.css'>
+		<link rel = 'stylesheet' href = '../public/estilo-postagem.css'>
+	</head>
+	<body>
+		<div id = 'fundo-cabecalho'>
+			<div class = 'container'>
+				<header>
+					
+					<!-- linha 1 -->
+					<!-- justify-content-between -->
+					<div class = 'row align-items-center' id = 'cabecalho'>
+						<!-- coluna 1-->
+						<div class = 'col-6 col-sm-8 col-lg-8 align-items-center'>
+							<h1 style = 'margin: 5px'>Elias Keven</h1>
+						</div>
+						<!-- coluna 2 -->
+						<div class = ' col-6 col-sm-3 col-lg-3'>
+							<nav>
+								<ul class = 'flexbox-end align-items-center' style = 'margin: 0px'>
+									<li><a href = './index.html' target = '_blanck'>PORTFÓLIO</a></li>
+									<li><a href = '#' target = '_blanck'>PROJETOS</a></li>
+								</ul>
+							</nav>
+						</div>			
+					</div>
+					
+					<!-- final da linha 1 -->
+
+				</header>
+			</div>
+		</div>
+		<section>
+			<div class = 'container'>
+				<main>
+					<header id = 'cabecalho-postagem'>
+						<h1>Autor: Elias Keven</h1>
+						<h2>Data da postagem: 30 de Novembro de 2016</h2>
+						<h3><a href = '../index-blog.html'>Menu</a> > JavaScript – Closure</h3>
+					</header>
+					<article id = 'postagem-principal'>			
+
+						<h1>JavaScript – Closure</h1>
+
+						<p class = 'recuo'>Quando pensamos que variáveis locais são eliminadas assim que a função é terminada, ficamos bastante surpresos quando descobrimos que ainda podemos ter acesso a elas. Como? Por meio da closures. Vamos ver um exemplo bem simples:</p>
+
+						<div class = 'caixa-codigo barra-horizontal border'>
+							<p data-codigo = true>
+								function calc(n) { 
+									return function(somar) { return n + somar }
+								}; 
+								const n = 2; 
+								const soma = calc(n); 
+								console.log (soma(8)); 
+							</p>
+							<p class = 'border caixa-codigo'>Resultado: 10</p>
+						</div>
+
+						<p class = 'recuo'>Muito interessante, não é? Pegamos o valor de “n”, que é 2, e colocamos na função “calc”. Essa função, por sua vez, chama a nova função que vai retornar o valor “n” mais a soma que iremos citar posteriormente. Note que “return funtion(somar)” não tem nome, só a declaração funcional e o paramento somar. Isso acontece por que essa função está sendo encaminhada para a variável “soma”. ou seja, o nome dela será “soma”, e o paramento “somar” será que vamos colocar na variável soma.  Pela lógica ficaria assim:</p>
+
+						<p data-codigo = true style = 'text-align: center'>soma = function(somar)</p>
+						<p>/* Aqui vemos a variável que foi transformada em função mais o parâmetro de valor 8.*/</p>
+
+						<p class = 'recuo'>Da para fazer inúmeras coisas, além do nome da função está bem resumido, precisando apenas chamar a variável soma e por um parâmetro para ela executar a função. O legal, é por que a função “calc” fica como se estivesse dentro da função “soma”. Logo todas as variáveis locais criadas em ‘calc” ficam salvas dentro de “soma”.</p>
+					</article>
+				</main>
+			</div>
+		</section>
+		<div class = 'container' style = 'background-color: #fffdfd;'>
+			<footer id = 'rodape' class = 'border'>
+				<nav class = 'centralizar'>
+					<ul class = 'centralizar'>
+						<li><a href = 'https://github.com/keven1406' target = '_blanck'>Github</a></li>
+						<li><a href = 'https://twitter.com/keven_2076' target = '_blanck'>Twitter</a></li>
+					</ul>
+				</nav>
+			</footer>
+			<script src = '../public/javascript.js'></script>
+			<script src = '../public/colorindo-codigo.js'></script>
+		</div>
+	</body>
+</html>

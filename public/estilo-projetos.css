@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+#corpo-projetos h1 {
+	font-family: 'Cairo', sans-serif;
+	text-align: center;
+	margin: 20px 0 10px 0;
+}
+#corpo-projetos nav ul {
+	padding: 0px;
+}
+#corpo-projetos nav ul li{
+	padding: 10px;
+	max-width: 300px;
+	margin-top: 30px;
+}
+
+#corpo-projetos nav ul li a {
+	text-align: center;
+}
+#corpo-projetos nav ul li p {
+	hyphens: auto;
+}
